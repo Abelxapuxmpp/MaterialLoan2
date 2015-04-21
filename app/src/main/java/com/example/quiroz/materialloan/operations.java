@@ -98,6 +98,10 @@ public class operations extends ActionBarActivity{
             ent = "SI";
         }
 
+        Cursor fila = BD.rawQuery("select fecha, nombre_sol, area_sol, descripcion, recibido, entregado from prestamos where clave_prestamo=" + claveprestamo, null);
+        if (fila.getCount() >= 1) {
+            Toast.makeText(this,"La clave de prestamos ya se encuentra registrado",Toast.LENGTH_SHORT).show();
+        } else {
             ContentValues registro = new ContentValues();
 
             registro.put("clave_prestamo", claveprestamo);
@@ -120,7 +124,7 @@ public class operations extends ActionBarActivity{
             ck_entregado.setChecked(false);
 
             Toast.makeText(this,"Se agrego el registro del prestamo",Toast.LENGTH_SHORT).show();
-
+        }
         edt_clave.setFocusable(true);
     }
 
