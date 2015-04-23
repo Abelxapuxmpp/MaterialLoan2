@@ -27,4 +27,6 @@
     <string name="Eliminar">ELIMINAR</string>
     <string name="Limpiar">LIMPIAR</string>
 
+    <string name="title_activity_listaregistros">LISTA DEE REGISTROS</string>
+
 </resources>

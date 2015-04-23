@@ -1,4 +1,4 @@
-package com.example.quiroz.materialloan;
+package com.example.quiroz.materialloan.modelos;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

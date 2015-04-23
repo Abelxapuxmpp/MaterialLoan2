@@ -72,6 +72,8 @@ public class MainActivity extends ActionBarActivity  implements View.OnClickList
                 break;
 
             case  R.id.bntcons:
+                Intent intento2 = new Intent(MainActivity.this, listaregistros.class);
+                startActivity(intento2);
                 break;
         }
     }
