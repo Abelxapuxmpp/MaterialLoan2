@@ -4,11 +4,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
 import android.widget.TextView;
 
 import com.example.quiroz.materialloan.R;
 import com.example.quiroz.materialloan.modelos.modelomaterial;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class adaptadormaterial extends RecyclerView.Adapter<adaptadormaterial.materialViewHolder> {
@@ -54,13 +56,21 @@ public class adaptadormaterial extends RecyclerView.Adapter<adaptadormaterial.ma
             viewHolder.fecha.setText(items.get(i).getFecha());
             viewHolder.nombre_sol.setText(items.get(i).getNombre_sol());
             viewHolder.area_sol.setText(items.get(i).getArea_sol());
-            viewHolder.descripcion.setText(items.get(i).getDescripcion());
-            viewHolder.recibido.setText(items.get(i).getRecibido());
-            viewHolder.entregado.setText(items.get(i).getEntregado());
+            viewHolder.descripcion.setText("Descripcion: "+items.get(i).getDescripcion());
+            viewHolder.recibido.setText("Recibido: "+items.get(i).getRecibido());
+            viewHolder.entregado.setText("Entregado: "+items.get(i).getEntregado());
         }
 
     @Override
     public int getItemCount() {
         return  items.size();
     }
-}
+
+
+
+
+
+    }
+
+
+

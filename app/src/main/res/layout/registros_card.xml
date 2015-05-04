@@ -4,8 +4,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    card_view:cardCornerRadius="0dp">
+    android:layout_height="105dp"
+    card_view:cardCornerRadius="0dp"
+    card_view:cardElevation="4dp"
+    android:id="@+id/card1"
+
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,22 +22,23 @@
             android:text="Clave_prestamo"
             android:id="@+id/clave_prestamo"
             android:textColor="#000000"
-            android:textSize="13sp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+
+            android:layout_marginLeft="5dp"
+           />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fecha"
             android:id="@+id/fecha"
-            android:textColor="#000000"            android:textSize="13sp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/clave_prestamo"
-            android:layout_toEndOf="@+id/clave_prestamo"
-            android:layout_marginLeft="15dp"
-            android:layout_marginStart="15dp" />
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="5dp"
+             />
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,11 +47,9 @@
             android:id="@+id/nombre_sol"
             android:textColor="#000000"
             android:textSize="13sp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginStart="15dp"
-            android:layout_alignBottom="@+id/fecha"
-            android:layout_toRightOf="@+id/fecha"
-            android:layout_toEndOf="@+id/fecha" />
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="100dp"
+             />
 
         <TextView
             android:layout_width="wrap_content"
@@ -55,11 +58,9 @@
             android:id="@+id/area_sol"
             android:textColor="#000000"
             android:textSize="13sp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/nombre_sol"
-            android:layout_toEndOf="@+id/nombre_sol"
-            android:layout_marginLeft="15dp"
-            android:layout_marginStart="15dp" />
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="250dp"
+           />
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,9 +69,9 @@
             android:id="@+id/descripcion"
             android:textColor="#000000"
             android:textSize="13sp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="100dp"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -79,10 +80,9 @@
             android:id="@+id/recibido"
             android:textColor="#000000"
             android:textSize="13sp"
-            android:layout_below="@+id/descripcion"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="26dp" />
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+           />
 
         <TextView
             android:layout_width="wrap_content"
@@ -91,9 +91,9 @@
             android:id="@+id/entregado"
             android:textColor="#000000"
             android:textSize="13sp"
-            android:layout_alignTop="@+id/recibido"
-            android:layout_alignRight="@+id/fecha"
-            android:layout_alignEnd="@+id/fecha" />
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="250dp"
+            />
 
     </RelativeLayout>
 
