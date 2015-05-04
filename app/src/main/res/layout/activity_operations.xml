@@ -21,9 +21,20 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView android:text="@string/Descripcion1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:id="@+id/txtdescripcion1"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"/>
+
             <TextView android:text="@string/Clave_registro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:textSize="15sp"
                 android:id="@+id/txtclave"
                 android:textColor="@android:color/black"
@@ -31,20 +42,22 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="5dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
                 android:id="@+id/edtclave"
                 android:layout_weight="1"
                 android:textColor="@android:color/black"
                 android:inputType="number"
-                android:background="@android:color/white" />
+                android:background="@android:color/white"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@null"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <TextView android:text="@string/Fecha"
@@ -56,18 +69,22 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
                 android:id="@+id/edtfecha"
                 android:layout_weight="1"
                 android:textColor="@android:color/black"
                 android:background="@android:color/white"
                 android:hint="@string/dd_mm_aaaa"
+                android:onClick="calendario"
                 android:textColorHint="@android:color/darker_gray"
-                android:textStyle="italic"/>
+                android:textStyle="italic"
+                android:enabled="false"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@null"/>
 
             <Button
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="25dp"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:text="@string/seleccionar"
@@ -81,7 +98,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <TextView android:text="@string/Nom_Alumno"
@@ -93,20 +110,22 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
                 android:id="@+id/edtnombre"
                 android:layout_weight="1"
                 android:textColor="@android:color/black"
                 android:background="@android:color/white"
-                android:inputType="text" />
+                android:inputType="text"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@null"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <TextView android:text="@string/Carrera"
@@ -118,20 +137,22 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
                 android:id="@+id/edtcarrera"
                 android:layout_weight="1"
                 android:textColor="@android:color/black"
                 android:background="@android:color/white"
-                android:inputType="text" />
+                android:inputType="text"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@null"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <TextView android:text="@string/Descripcion"
@@ -150,16 +171,19 @@
                 android:layout_marginTop="5dp"
                 android:textColor="@android:color/black"
                 android:background="@android:color/white"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@null"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp">
 
             <CheckBox
                 android:text="@string/Recibido"
@@ -198,79 +222,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="5dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
-
-            <Button
-                android:layout_marginRight="20dp"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="@string/Registrar"
-                android:onClick="registrar"
-                android:background="#ff0d47a0"
-                android:id="@+id/btnregistrar"/>
-
-            <Button
-                android:layout_marginRight="20dp"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="@string/Buscar"
-                android:onClick="buscar"
-                android:background="#ff0d47a0"
-                android:id="@+id/btnbuscar"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="5dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
-
-            <Button
-                android:layout_marginRight="20dp"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="@string/Actualizar"
-                android:onClick="actualizar"
-                android:background="#ff0d47a0"
-                android:id="@+id/btnactualizar"/>
-
-            <Button
-                android:layout_marginRight="20dp"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="@string/Eliminar"
-                android:onClick="eliminar"
-                android:background="#ff0d47a0"
-                android:id="@+id/btneliminar"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="5dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
-
-            <Button
-                android:layout_marginRight="20dp"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="@string/Limpiar"
-                android:onClick="limpiar"
-                android:background="#ff0d47a0"
-                android:id="@+id/btnlimpiar"/>
-
-        </LinearLayout>
 
     </LinearLayout>
 

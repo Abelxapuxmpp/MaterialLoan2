@@ -3,8 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.quiroz.materialloan.operations">
 
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+    <item android:id="@+id/sguardar"
+        android:title="@string/sregistrar"
+        android:orderInCategory="100"
+        android:icon="@drawable/nuevo"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/sbuscar"
+        android:title="@string/sbuscar"
+        android:orderInCategory="100"
+        android:icon="@drawable/buscar"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/seditar"
+        android:title="@string/seditar"
+        android:orderInCategory="100"
+        android:icon="@drawable/editar"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/seliminar"
+        android:title="@string/seliminar"
+        android:orderInCategory="100"
+        android:icon="@drawable/eliminar"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/slimpiar"
+        android:title="@string/slimpiar"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/ssalir"
+        android:title="@string/ssalir"
         android:orderInCategory="100"
         app:showAsAction="never" />
 </menu>

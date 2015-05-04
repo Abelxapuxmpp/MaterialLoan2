@@ -43,6 +43,9 @@ public class listaregistros extends ActionBarActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listaregistros);
 
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         final List<modelomaterial> items = new ArrayList<>();
 
         ConexionSQL funcion = new ConexionSQL(this, "prestamos", null, 1);
@@ -148,7 +151,8 @@ public class listaregistros extends ActionBarActivity  {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.ssalir) {
+            finish();
             return true;
         }
 
